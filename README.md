@@ -11,6 +11,122 @@ o	age
 o	distance_to_city(km) 
 •	The target variable is: 
 o	price 
+
+## THEORY
+
+1. Introduction
+
+Linear Regression is a supervised machine learning algorithm used to predict a continuous numerical value based on one or more input variables.
+
+It assumes that there is a linear relationship between the input variable(s) and the output variable.
+
+For example, Linear Regression can be used to predict:
+
+House prices based on area
+Salary based on years of experience
+Sales based on advertising expenditure
+Temperature based on environmental factors
+Student marks based on study hours
+2. Types of Linear Regression
+Simple Linear Regression
+
+Simple Linear Regression uses one independent variable to predict one dependent variable.
+
+The equation is:
+
+y = b₀ + b₁x
+
+where:
+
+y = predicted output
+x = input variable
+b₀ = intercept
+b₁ = slope/coefficient
+
+Multiple Linear Regression
+
+Multiple Linear Regression uses two or more independent variables to predict the dependent variable.
+
+The general equation is:
+
+y = b₀ + b₁x₁ + b₂x₂ + ... + bₙxₙ
+
+3. Working Principle
+
+The Linear Regression algorithm attempts to find the best-fit straight line through the available data points.
+
+The best-fit line is selected by minimizing the difference between the actual values and the predicted values.
+
+These differences are called residuals or errors.
+
+The model commonly uses the Least Squares Method, which minimizes the sum of squared errors.
+
+The process can be represented as:
+```
+Input Data
+↓
+Split into Training and Testing Data
+↓
+Train Linear Regression Model
+↓
+Calculate Best-Fit Line
+↓
+Predict Output
+↓
+Compare Actual and Predicted Values
+↓
+Evaluate Model Performance
+```
+4. Training the Model
+
+The dataset is divided into:
+
+Training Data
+
+Used to teach the model the relationship between input and output variables.
+
+Testing Data
+
+Used to evaluate how well the trained model predicts previously unseen data.
+
+A common approach is to use 80% of the data for training and 20% for testing.
+
+5. Model Evaluation
+
+After making predictions, the performance of the Linear Regression model can be evaluated using different metrics.
+
+Mean Absolute Error (MAE)
+
+Measures the average absolute difference between actual and predicted values.
+
+Mean Squared Error (MSE)
+
+Measures the average squared difference between actual and predicted values.
+
+Root Mean Squared Error (RMSE)
+
+The square root of MSE. It represents the prediction error in the same units as the target variable.
+
+R² Score
+
+The coefficient of determination indicates how well the model explains the variation in the dependent variable.
+
+An R² value closer to 1 generally indicates a better fit.
+
+## PROCEDURE
+1.Import the required Python libraries.
+2.Load the dataset using Pandas.
+3.Examine the dataset using head(), info(), and shape.
+4.Select the independent and dependent variables.
+5.Split the dataset into training and testing sets.
+6.Create a Linear Regression model using Scikit-learn.
+7.Train the model using the training dataset.
+8.Predict the output for the testing dataset.
+9.Compare actual and predicted values.
+10.Calculate the model performance using MAE, MSE, RMSE, and R² score.
+11.Visualize the regression line and data points.
+12.Interpret the result.
+
 ## DATASET DESCRIPTION
 •	Dataset: House Price Dataset 
 •	Problem: Predict house price. 
@@ -502,6 +618,13 @@ plt.title(
 plt.show()
 •	The graph provides a visual comparison of model errors. 
 •	The model with the lowest RMSE performs best according to this metric.
+
+## RESULT
+The Linear Regression model was successfully developed using Python and Scikit-learn. The dataset was divided into training and testing sets, and the model was trained to learn the relationship between years of experience and salary.
+The trained model successfully predicted salary values for the test data. The model performance was evaluated using MAE, MSE, RMSE, and R² score.
+
+The regression line also provided a visual representation of the relationship between the independent and dependent variables.
+
 ## CONCLUSION
 Thus, Linear Regression and other regression models were successfully applied for house price prediction, and their performance was compared using standard regression evaluation metrics.
 
